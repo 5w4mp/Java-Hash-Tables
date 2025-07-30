@@ -62,3 +62,15 @@ Component Sum Hash Function:
         - 1.) call B.toString() --> We get StringB // must override
         - 2.) We apply Component Sum Idea on StringB.
 
+How do we handle collisions?
+        - A collision is when two keys point to the same hash value.
+
+        -To handle collision, First approach:
+             Seperate chaining strategy.
+        -ex. associate a persons ssn with their name.
+        hashfunction h(ssn) {
+        return the last digit of the input
+        }
+        - you use the hash function, and set up linked lists in the container array at each index.
+        - you then chain records with the same hash value into a linked list.
+        - An array of linked list objects is the same as an array of Student Objects.
