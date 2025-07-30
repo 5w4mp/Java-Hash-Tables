@@ -74,3 +74,6 @@ How do we handle collisions?
         - you use the hash function, and set up linked lists in the container array at each index.
         - you then chain records with the same hash value into a linked list.
         - An array of linked list objects is the same as an array of Student Objects.
+        - If your hash function produces a lot of colliding items, then your hash function is doodoo
+          baby.
+        -
