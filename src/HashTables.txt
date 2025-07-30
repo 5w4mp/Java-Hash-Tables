@@ -39,5 +39,26 @@ Hash functions:
         - 2.) Compression function: h2(bigInteger) ---> [0, n-1] //this is the final index.
 
 Hash function attributes:
-        - The goal of a hash function is to disprese the keys as evenly as possible into different
+        - The goal of a hash function is to disperse the keys as evenly as possible into different
           array index locations.
+        - it is highly possible that different keys will produce different hash values.
+        - there is a slight chance that two keys have the same hash value.
+        - However guranteed that for the same key, a hash function always produces the same hash
+          value.
+
+Component Sum Hash Function:
+        - We have key in string. k = "abc"
+        - In java, each character is encoded by a integer.  //ASCII table
+        - "a" is 97, "b" is 98, "c" is 99
+        - we use component sum to add these numbers up.
+        - a + b + c --> 97+98+99 --> 294
+        - (Compression Function) 294 % N ---> [0, N-1]
+        - we use the integer from [0, N-1] == i
+        - we use i as the index into the container array.
+        - we assume the input is a string type, what if the input key is another type in Java?
+        - What if the input key is an Object B?
+        - We use toString to go from ObjectB to string.
+        - Different objects have unique results from toString.
+        - 1.) call B.toString() --> We get StringB // must override
+        - 2.) We apply Component Sum Idea on StringB.
+
