@@ -1,0 +1,19 @@
+Hash Tables //Weezer intensifies
+
+Motivation:
+        - Assume we need a data structure to associate person's SSN with their name.
+        - If we use an Array, index[0] is the SSN, index[1] is the name.  each row is a new person.
+        - How do we retrieve a persons name after given its SSN?
+        - getName(1230456790) you need to search.
+        - If we use a 1-d array, getName(ssn) is a linear search.  O(n)
+        - Key-value pairs?
+
+        - We use Hash tables to solve this problem.
+        - The advantage of using hash tables is getName(ssn) takes O(1) on average.
+
+Concept:
+        - Hash tables store a set of records.
+        - A record consists of a key and a value that is associated with the key.
+        - Given a uinique key, it has only one value attached to that key.
+        - All the keys in a hash table are distinct/unique.
+        -
