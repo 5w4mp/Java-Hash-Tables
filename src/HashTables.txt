@@ -16,4 +16,28 @@ Concept:
         - A record consists of a key and a value that is associated with the key.
         - Given a uinique key, it has only one value attached to that key.
         - All the keys in a hash table are distinct/unique.
-        -
+
+More Hash Table Notes:
+        -They are very useful for databases.
+How hash tables work:
+        - A hash table for a set of key-value pairs consists of TWO COMPONENTS.
+        - 1.) Hash function, h():
+        - 2.) A one-d array of size n.  (Serves as a container for the records)
+        - When implementing a hash table, the goal is to store a record(k, v) key, value,
+          at index i = h(k) in the container array.
+        - (k, v) ---> k ----> h(k) = int i; Stores the key and the value in the index with the
+          key.
+        - The hash function is where the magic happens. It's like an information desk, you ask
+          for information, and it tells you where the record is stored.
+        - Hash function example:
+          h(x) = x mod N, x is an integer(key) // basic hash function for integer keys.
+
+Hash functions:
+        - A hash function usually has 2 steps:
+        - 1.) hash code: h1 (key) ----> big integer //larger than the 1d array container. pipes into
+              compression function
+        - 2.) Compression function: h2(bigInteger) ---> [0, n-1] //this is the final index.
+
+Hash function attributes:
+        - The goal of a hash function is to disprese the keys as evenly as possible into different
+          array index locations.

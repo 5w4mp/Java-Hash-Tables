@@ -28,5 +28,12 @@ class HashTables
             System.out.println(ssn + ": " );
             ssnTable.get(ssn);
         }
+        System.out.println();
+        name = ssnTable.get(678901234);
+        ssnTable.put(678901234, "Alton");
+        System.out.println("678901234's new name: "+ ssnTable.get(678901234));
+
+        //put can insert a new record.  If the key exists already, it updates the old value.
+
     }
 }
