@@ -53,7 +53,7 @@ public class HashTab {
                 //Sys.out.println("j = " + j);
                 res +=j;
             }
-            return (result % this.table.length);
+            return (res % this.table.length);
         }
         public void put(Object key, Object data)
         {
